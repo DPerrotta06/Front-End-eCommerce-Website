@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/PDL.css">
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="Home Page.html">Home Page</a></li>
+                    <li><a href="About Contact Page.html"></a></li>
+                </ul>
+            </nav>
+            <input id="search" type="text" placeholder="Search product">
+            <button id="product-search-button">Search🔍</button>
+            <a href="Shopping Cart Page.html" id="home-shoppingcart">
+                🛒<span>0</span>
+            </a>
+            <a href="Profile Page.html" id="home-pfp">Profile👤</a>
+        </div>
+    </header>
+    <aside>
+        <h2>Filters</h2>
+        <section>
+            <h3>Category:</h3>
+            <div>
+                <label>
+                    <input type="checkbox" id="electronics-chkBox" name="electronics-chkBox">
+                    <span>Electronics</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="home-chkBox" name="home-chkBox">
+                    <span>Home & Kitchen</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="sports-chkBox" name="sports-chkBox">
+                    <span>Sports & Outdoors</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="beauty-chkBox" name="beauty-chkBox">
+                    <span>Beauty & Personal Care</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="toys-chkBox" name="toys-chkBox">
+                    <span>Toys & Games</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="clothing-chkBox" name="clothing-chkBox">
+                    <span>Clothing</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="auto-chkBox" name="auto-chkBox">
+                    <span>Automotive</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="office-chkBox" name="office-chkBox">
+                    <span>Office Supplies</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="garden-chkBox" name="garden-chkBox">
+                    <span>Garden & Outdoors</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="pet-chkBox" name="pet-chkBox">
+                    <span>Pet Supplies</span>
+                </label>
+            </div>
+            <h3>Price Range:</h3>
+            <div>
+                <label>
+                    <span>$0</span>
+                    <input type="range" id="price-range">
+                    <span>$500</span>
+                </label>
+            </div>
+            <button type="button" id="reset-filter">Reset Filter</button>
+        </section>
+    </aside>
+    <section>
+        <div class="sort-container">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+                <option value="default">Default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+            </select>
+        </div>
+        <div>
+            <!--Product Images go here-->
+        </div>
+        <div class="pagination">
+            <button id="prev-page">← Previous</button>
+            <span id="page-numbers"></span>
+            <button id="next-page">Next →</button>
+        </div>
+    </section>
+    <footer>
+        <a href="About Contact Page.html">Contact Us!</a>
+        <div id="social-links">
+            Follow Us On 
+            <a href="#">Instagram</a>
+            <a href="#">FaceBook</a>
+            <a href="#">Pinterest</a>
+        </div>
+        <p>&copy; 2025 YMCBay. All Rights reserved.</p>
+    </footer>
+</body>
+</html>
