@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/About.css">
+</head>
+<body>
+    <!-- Header -->
+    <header> 
+        <nav>
+            <a class="logo">🛒 YMCBay</a>
+            <ul class="nav-linked"> 
+                <li> <a> Home </a> </li>
+                <li> <a> Products </a> </li>
+                <li> <a> About </a> </li>
+                <li> <a> Contact </a> </li>
+            </ul>
+            <div class="nav-ico"> 
+                <button class="ico-button" aria-label="Search">🔍</button>
+                <button class="ico-button" aria-label="Shopping Cart">🛒 
+                    <span class="cart-badger">0</span>
+                </button>
+                <button class="ico-button" onclick="window.location.href='Login.html'" aria-label="Account">👤</button>
+            </div>
+        </nav>
+    </header>
+    <section class="about-ymcbay">
+        <h1>About YMCBay</h1>
+        <p> 
+            Your somewhat trusted partner for quality products and exceptional shopping experience    
+        </p>
+    </section>
+    <main class="section-container"> 
+        <section class="section" id="story"> 
+            <h2> Our Story </h2>
+            <div class="about-content"> 
+                <div class="about-text">
+                    <p> Founded in 2025, YMCBay has grown to become one of the most interesting online retailers, comitted to bringing you the some what best products at competitve prices. 
+                        Our mission is to make online shopping easy, secure, and enjoyable for every single user
+                    </p>
+                    <p> We believe in quality over quantity, which is why we carefully curate each product in our catalog. 
+                        Our team works some what tirelessly to ensure that every item meets our high standards of excellence. 
+                    </p>
+                </div>
+            </div>  
+        </section>
+        <section class="section" id="contact"> 
+            <h2> Email Us </h2>
+            <div class="contact-container"> 
+                <div class="contact-form"> 
+                    <form id="contact-data">
+                    <div class="form-group">  
+                        <label for="name"> Full Name </label>
+                        <input type="text" id="name" name="name" required> 
+                    </div>
+                    <div class="form-group">
+                        <label for="email"> Email Address </label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject"> Subject </label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="message"> Message </label>
+                    <textarea id="message" name="message" required> </textarea>
+                    </div>
+                    <button type="submit" class="submit-button"> Send Email </button>
+                </form>
+                </div>
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-ico">📍</div>
+                        <div class="info-content">
+                        <h3> Address </h3>
+                        <p> 821 Av Sainte-Croix
+                        <br>
+                        Montreal QC, H4L 3X9
+                        <br>
+                        Canada
+                        </p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-ico">📧</div>
+                        <div class="info-content">
+                        <h3> Email </h3>
+                        <p> YMCBaysupport@YMCBay.com
+                        <br>
+                        YMCBaysales@YMCBay.com
+                        </p>
+                        </div>
+                    </div>
+                    <div class="info-card"> 
+                        <div class="info-ico">📞</div>
+                        <div class="info-content"> 
+                            <h3> Phone Number </h3>
+                            <p>
+                            +1 (514) 987-6543
+                            <br>
+                            Mon-Fri: 8AM - 7Pm EST
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-card"> 
+                        <div class="info-ico">🌐</div>
+                        <div class="info-content"> Follow Us
+                            <div class="social-media"> 
+                                <a class="social-ico" aria-label="Facebook">f</a>
+                                <a class="social-ico" aria-label="Twitter">X</a>
+                                <a class="social-ico" aria-label="Instagram">Insta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer> 
+        <div class="footer-container">
+            <div class="footer-section"> 
+                <h3> Shop </h3>
+                <ul> 
+                    <li> <a> All Products </a> </li>
+                    <li> <a> Electronics </a> </li>
+                    <li> <a> Clothing </a> </li>
+                    <li> <a> Home & Kitchen </a> </li>
+                </ul>  
+            </div>
+            <div class="footer-section"> 
+                <h3> Customer Service </h3>
+                <ul> 
+                    <li> <a href="#contact"> Contact Us </a> </li>
+                    <li> <a> Shipping Info </a> </li>
+                    <li> <a> Returns </a> </li>
+                    <li> <a> FAQ </a> </li>
+                </ul>
+            </div>
+            <div class="footer-section"> 
+                <h3> About </h3>
+                <ul> 
+                    <li> <a href="#story"> Our Story </a> </li>
+                    <li> <a> Privacy Policy </a> </li>
+                    <li> <a> Terms of Service </a> </li>
+                </ul>
+            </div>
+            <div class="footer-section"> 
+                <h3>Newsletter</h3>
+                <p> Subscribe for exclusive offers and updates </p>
+                <div class="newsletter-input"> 
+                    <input type="email" placeholder="your email", id="newsletterEmail">
+                    <button class="newsletter-button" onclick="subscribeNewsletter()">Subscribe</button>
+                </div>
+            </div>
+            </div>
+            <div class="footer-bottom"> 
+                <p> &copy 2025 YMCBay. All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
