@@ -79,13 +79,11 @@
                         <span>Pet Supplies</span>
                     </label>
                 </div>
-
                 <div>
                     <label for="price-range-slider">Price Range:</label>
                         <span>$<span id="min">0</span> - $<span id="max">1000</span></span>
                         <input type="range" id="price-range" min="0" max="1000" value="1000">
                 </div>
-
                 <button type="button" id="reset-filter">Reset Filter</button>
             </section>
         </aside>
@@ -99,12 +97,14 @@
                 </select>
             </div>
             <section id="products-table">
-                <!--Shown dynamically here with JS-->
+                <div id="items-list" class="items-list-wrapper">
+                    <!--JSON items generated here with JS-->
+                </div>
             </section>
             <div id="pagination">
-                <button id="prev-page">⬅️Previous</button>
+                <button id="prev-page">⬅️ Previous</button>
                 <span id="page-numbers"></span>
-                <button id="next-page">Next➡️</button>
+                <button id="next-page">Next ➡️</button>
             </div>
         </section>
 </main>

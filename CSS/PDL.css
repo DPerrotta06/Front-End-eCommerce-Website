@@ -111,11 +111,17 @@ header nav a:hover {
     font-weight: bold;
 }
 
-/* ========== Breadcrumb & Results Info ========== */
+/* ========== Breadcrumb & Results Info Section ========== */
+body > section:first-of-type {
+    background: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
 #breadcrumb-nav {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 20px 10px;
+    padding: 5px 20px;
     font-size: 14px;
     color: #666;
 }
@@ -123,7 +129,7 @@ header nav a:hover {
 .products-being-displayed {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 10px 20px 20px;
+    padding: 5px 20px;
     font-size: 16px;
     color: #666;
 }
@@ -137,7 +143,7 @@ header nav a:hover {
 .products-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px 40px;
+    padding: 30px 20px 40px;
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 30px;
@@ -162,11 +168,15 @@ aside h2 {
     border-bottom: 2px solid #667eea;
 }
 
-aside h3 {
+aside section h3 {
     font-size: 16px;
     color: #333;
     margin: 20px 0 15px;
     font-weight: 600;
+}
+
+aside section h3:first-child {
+    margin-top: 0;
 }
 
 aside label {
@@ -191,21 +201,25 @@ aside input[type="checkbox"] {
     accent-color: #667eea;
 }
 
-/* Price Range Slider */
-aside > section > div:last-of-type {
+/* Price Range Slider Container */
+aside section > div:nth-child(2) {
     margin-top: 20px;
 }
 
-aside > section > div:last-of-type label {
+aside section > div:nth-child(2) > label {
     display: block;
     margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
 }
 
-aside > section > div:last-of-type span {
-    display: flex;
+aside section > div:nth-child(2) > span {
+    display: block;
     font-size: 14px;
     color: #667eea;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 
 #price-range {
@@ -296,16 +310,20 @@ aside > section > div:last-of-type span {
     border-color: #667eea;
 }
 
-/* Products Grid */
+/* Products Table Section */
 #products-table {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
     margin-bottom: 30px;
     min-height: 400px;
 }
 
-/* Product Card */
+/* Items List Wrapper (JS will populate this) */
+.items-list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Product Card Styles (for JS-generated cards) */
 .product-card {
     background: white;
     border: 1px solid #e0e0e0;
@@ -348,7 +366,6 @@ aside > section > div:last-of-type span {
     color: #333;
     margin-bottom: 10px;
     font-weight: 600;
-    display: -webkit-box;
     overflow: hidden;
 }
 
@@ -359,7 +376,8 @@ aside > section > div:last-of-type span {
     margin-bottom: 15px;
 }
 
-.product-btn {
+.product-btn,
+.add-to-cart-btn {
     width: 100%;
     padding: 10px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -372,7 +390,8 @@ aside > section > div:last-of-type span {
     transition: all 0.3s;
 }
 
-.product-btn:hover {
+.product-btn:hover,
+.add-to-cart-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
@@ -476,7 +495,7 @@ footer p {
         grid-template-columns: 240px 1fr;
     }
     
-    #products-table {
+    .items-list-wrapper {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     }
 }
@@ -496,7 +515,7 @@ footer p {
         top: 0;
     }
     
-    #products-table {
+    .items-list-wrapper {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 15px;
     }
@@ -511,7 +530,7 @@ footer p {
 }
 
 @media (max-width: 480px) {
-    #products-table {
+    .items-list-wrapper {
         grid-template-columns: 1fr;
     }
     

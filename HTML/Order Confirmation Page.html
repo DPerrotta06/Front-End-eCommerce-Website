@@ -3,10 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Order Confirmation</title>
     <link rel="stylesheet" type="text/css" href="../CSS/Order Confirmation.css">
 </head>
 <body>
-    
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="Home Page.html">Back To Home Page</a></li>
+                    <li><a href="Product Listing Page.html">Products</a></li>
+                    <li><a href="About Contact Page.html">About & Contact</a></li>
+                </ul>
+            </nav>
+            <a href="Shopping Cart Page.html" id="home-shoppingcart">
+                🛒<span id="cart-count">0</span>
+            </a>
+            <a href="Profile Page.html" id="home-pfp">Profile👤</a>
+        </div>
+    </header>
+    <section class="order-confirmed">
+        <h1>Order Confirmed! ☑️</h1>
+        <p>Thank you for your purchase. Your order has been successfully placed and has been sent off for shipping! 🚚💨</p>
+    </section>
+    <main class="confirm-order-wrapper">
+        <h1>Order Details:</h1>
+        <div id="order-num">
+            <h4>Order Number:</h4>
+            <span>#order number</span>
+        </div>
+        <div id="estimated-delivery">
+            <h4>Order Date:</h4>
+            <span>Your order should arrive on: </span>
+        </div>
+        <div id="order-summary">
+            <h3>Order Summary</h3>
+            <div id="order-items-list" class="order-items-container">
+            </div>
+            <div class="price-breakdown-summary">
+                <span id="sub">Subtotal:</span>
+                <span id="sub-price">$</span>
+                <span id="tax">Tax </span>
+                <span id="tax-price">$</span>
+                <span id="total">Total:</span>
+                <span id="toatl-price">$</span>
+            </div>
+        </div>
+        <div id="home link">
+            <a href="Home Page.html">Return Home</a>
+        </div>
+    </main>
+    <footer> 
+        <div class="footer-container">
+            <div class="footer-section"> 
+                <h3> Shop </h3>
+                <ul> 
+                    <li> <a> All Products </a> </li>
+                    <li> <a> Electronics </a> </li>
+                    <li> <a> Clothing </a> </li>
+                    <li> <a> Home & Kitchen </a> </li>
+                </ul>  
+            </div>
+            <div class="footer-section"> 
+                <h3> Customer Service </h3>
+                <ul> 
+                    <li> <a href="#contact"> Contact Us </a> </li>
+                    <li> <a> Shipping Info </a> </li>
+                    <li> <a> Returns </a> </li>
+                    <li> <a> FAQ </a> </li>
+                </ul>
+            </div>
+            <div class="footer-section"> 
+                <h3> About </h3>
+                <ul> 
+                    <li> <a href="#story"> Our Story </a> </li>
+                    <li> <a> Privacy Policy </a> </li>
+                    <li> <a> Terms of Service </a> </li>
+                </ul>
+            </div>
+            <div class="footer-section"> 
+                <h3>Newsletter</h3>
+                <p> Subscribe for exclusive offers and updates </p>
+                <div class="newsletter-input"> 
+                    <input type="email" placeholder="your email" id="newsletterEmail">
+                    <button class="newsletter-button" onclick="subscribeNewsletter()">Subscribe</button>
+                </div>
+            </div>
+            </div>
+            <div class="footer-bottom"> 
+                <p> &copy 2025 YMCBay. All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
