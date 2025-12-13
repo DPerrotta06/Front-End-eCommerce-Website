@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Listing</title>
     <link rel="stylesheet" type="text/css" href="../CSS/PDL.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         <div>
             <nav>
                 <ul>
-                    <li><a href="Home Page.html">Home Page</a></li>
+                    <li><a href="Home Page.html">Back To Home Page</a></li>
                     <li><a href="About Contact Page.html"></a></li>
                 </ul>
             </nav>
@@ -23,81 +23,91 @@
             <a href="Profile Page.html" id="home-pfp">Profile👤</a>
         </div>
     </header>
-    <aside>
-        <h2>Filters</h2>
-        <section>
-            <h3>Category:</h3>
-            <div>
-                <label>
-                    <input type="checkbox" id="electronics-chkBox" name="electronics-chkBox">
-                    <span>Electronics</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="home-chkBox" name="home-chkBox">
-                    <span>Home & Kitchen</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="sports-chkBox" name="sports-chkBox">
-                    <span>Sports & Outdoors</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="beauty-chkBox" name="beauty-chkBox">
-                    <span>Beauty & Personal Care</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="toys-chkBox" name="toys-chkBox">
-                    <span>Toys & Games</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="clothing-chkBox" name="clothing-chkBox">
-                    <span>Clothing</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="auto-chkBox" name="auto-chkBox">
-                    <span>Automotive</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="office-chkBox" name="office-chkBox">
-                    <span>Office Supplies</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="garden-chkBox" name="garden-chkBox">
-                    <span>Garden & Outdoors</span>
-                </label>
-                <label>
-                    <input type="checkbox" id="pet-chkBox" name="pet-chkBox">
-                    <span>Pet Supplies</span>
-                </label>
-            </div>
-            <h3>Price Range:</h3>
-            <div>
-                <label>
-                    <span>$0</span>
-                    <input type="range" id="price-range">
-                    <span>$500</span>
-                </label>
-            </div>
-            <button type="button" id="reset-filter">Reset Filter</button>
-        </section>
-    </aside>
     <section>
-        <div class="sort-container">
-            <label for="sort-select">Sort by:</label>
-            <select id="sort-select">
-                <option value="default">Default</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-            </select>
+        <div id="breadcrumb-nav">
+            Home ⏩ Products
         </div>
-        <div>
-            <!--Product Images go here-->
-        </div>
-        <div class="pagination">
-            <button id="prev-page">← Previous</button>
-            <span id="page-numbers"></span>
-            <button id="next-page">Next →</button>
+        <div class="products-being-displayed">
+            Showing <span id="current-product-count">0</span> 
+            of <span id="total-product-count">0</span> products
         </div>
     </section>
+    <main class="products-wrapper">
+        <aside>
+            <h2>Filters</h2>
+            <section>
+                <h3>Category:</h3>
+                <div>
+                    <label>
+                        <input type="checkbox" id="electronics-chkBox" name="electronics-chkBox">
+                        <span>Electronics</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="home-chkBox" name="home-chkBox">
+                        <span>Home & Kitchen</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="sports-chkBox" name="sports-chkBox">
+                        <span>Sports & Outdoors</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="beauty-chkBox" name="beauty-chkBox">
+                        <span>Beauty & Personal Care</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="toys-chkBox" name="toys-chkBox">
+                        <span>Toys & Games</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="clothing-chkBox" name="clothing-chkBox">
+                        <span>Clothing</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="auto-chkBox" name="auto-chkBox">
+                        <span>Automotive</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="office-chkBox" name="office-chkBox">
+                        <span>Office Supplies</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="garden-chkBox" name="garden-chkBox">
+                        <span>Garden & Outdoors</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="pet-chkBox" name="pet-chkBox">
+                        <span>Pet Supplies</span>
+                    </label>
+                </div>
+
+                <div>
+                    <label for="price-range-slider">Price Range:</label>
+                        <span>$<span id="min">0</span> - $<span id="max">1000</span></span>
+                        <input type="range" id="price-range" min="0" max="1000" value="1000">
+                </div>
+
+                <button type="button" id="reset-filter">Reset Filter</button>
+            </section>
+        </aside>
+        <section>
+            <div id="sort-container">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select">
+                    <option value="default">Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+            </div>
+            <section id="products-table">
+                <!--Shown dynamically here with JS-->
+            </section>
+            <div id="pagination">
+                <button id="prev-page">⬅️Previous</button>
+                <span id="page-numbers"></span>
+                <button id="next-page">Next➡️</button>
+            </div>
+        </section>
+</main>
     <footer>
         <a href="About Contact Page.html">Contact Us!</a>
         <div id="social-links">
