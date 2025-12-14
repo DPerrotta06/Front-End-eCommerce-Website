@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
     <link rel="stylesheet" type="text/css" href="../CSS/PDP.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../Javascript/Product Detail.js" type="text/Javascript"></script>
 </head>
 <body>
     <!--Header-->
@@ -23,7 +25,6 @@
             <a href="Profile Page.html" id="home-pfp">Profile👤</a>
         </div>
     </header>
-
     <!--Breadcrumb-->
     <section class="breadcrumb-section">
         <div id="breadcrumb-nav">
@@ -33,7 +34,6 @@
             <span id="product-name-breadcrumb">Product</span>
         </div>
     </section>
-
     <!-- Main Product Detail (Image + Info) -->
     <main class="product-detail-wrapper">
         <!-- Product Images -->
@@ -49,19 +49,15 @@
                 <img class="thumbnail" src="https://via.placeholder.com/100x100/764ba2/ffffff?text=4" alt="thumbnail-4">
             </div>
         </aside>
-
         <!-- Product Info -->
         <section class="product-info">
             <h2 id="product-title">Product name from JSON goes here</h2>
-            
             <div class="rating">
                 <span class="rating-text">(0 out of 5) | <a href="#reviews">0 reviews</a></span>
             </div>
-
             <div id="product-price">
                 <p class="price-value">$99.99</p>
             </div>
-
             <div id="product-metadata">
                 <p>
                     <strong>SKU:</strong> 
@@ -69,36 +65,29 @@
                 </p>
                 <p class="stock-status in-stock">☑️ In stock</p>
             </div>
-
             <div id="product-description">
                 <h3>About this product:</h3>
                 <p>Premium wireless headphones with active noise cancellation technology. Experience crystal-clear audio quality with deep bass and crisp highs. Features include 30-hour battery life, Bluetooth 5.0 connectivity, comfortable over-ear design, and built-in microphone for calls.</p>
             </div>
-
             <div id="product-quantity">
                 <label for="quantity">Quantity:</label>
                 <button id="decrease" class="qty-btn">-</button>
                 <input type="number" id="quantity" value="1" min="1" max="10">
                 <button id="increase" class="qty-btn">+</button>
             </div>
-
             <button id="add-to-cart-btn">Add to Cart</button>
         </section>
     </main>
-
     <!-- Customer Reviews Section (Full Width) -->
     <section class="customer-reviews-section">
         <div class="container">
             <h2>Customer Reviews From This Product</h2>
-            
             <div class="reviews-summary">
                 <div class="average-rating">
                     <span class="big-rating">0</span>
                     <p>Based on 0 reviews</p>
             </div>
-
             <div id="customer-reviews">
-                <!-- Review 1 -->
                 <div class="review-card">
                     <div class="review-header">
                         <span class="review-author">John D.</span>
@@ -106,8 +95,6 @@
                     <h4 class="review-title"></h4>
                     <p class="user-review"></p>
                 </div>
-
-                <!-- Review 2 -->
                 <div class="review-card">
                     <div class="review-header">
                         <span class="review-author">Sarah M.</span>
@@ -115,8 +102,6 @@
                     <h4 class="review-title"></h4>
                     <p class="user-review"></p>
                 </div>
-
-                <!-- Review 3 -->
                 <div class="review-card">
                     <div class="review-header">
                         <span class="review-author">Mike R.</span>
@@ -127,46 +112,36 @@
             </div>
         </div>
     </section>
-
-    <!-- Product Suggestions Section -->
     <section class="product-suggestions">
         <div class="container">
             <h2>Products you may also like:</h2>
-            
             <div class="suggestions-grid">
-                <!-- Suggested Product 1 -->
                 <div class="suggested-item">
-                    <img src="https://via.placeholder.com/200x200/667eea/ffffff?text=Speaker" alt="item-img">
+                    <img src="#" alt="item-img">
                     <div class="suggested-info">
                         <h4 class="suggested-product-title"></h4>
                         <p class="suggested-price">$</p>
                         <button class="view-details-btn">View Details</button>
                     </div>
                 </div>
-
-                <!-- Suggested Product 2 -->
                 <div class="suggested-item">
-                    <img src="https://via.placeholder.com/200x200/764ba2/ffffff?text=Earbuds" alt="item-img">
+                    <img src="#" alt="item-img">
                     <div class="suggested-info">
                         <h4 class="suggested-product-title"></h4>
                         <p class="suggested-price">$</p>
                         <button class="view-details-btn">View Details</button>
                     </div>
                 </div>
-
-                <!-- Suggested Product 3 -->
                 <div class="suggested-item">
-                    <img src="https://via.placeholder.com/200x200/667eea/ffffff?text=Watch" alt="item-img">
+                    <img src="#" alt="item-img">
                     <div class="suggested-info">
                         <h4 class="suggested-product-title"></h4>
                         <p class="suggested-price">$</p>
                         <button class="view-details-btn">View Details</button>
                     </div>
                 </div>
-
-                <!-- Suggested Product 4 -->
                 <div class="suggested-item">
-                    <img src="https://via.placeholder.com/200x200/764ba2/ffffff?text=Charger" alt="item-img">
+                    <img src="#" alt="item-img">
                     <div class="suggested-info">
                         <h4 class="suggested-product-title"></h4>
                         <p class="suggested-price">$</p>
