@@ -1,5 +1,5 @@
-const regEmail = /^[^@\s]+@[^@\s]+\.[^@\s]+$/gm;
-const regPw = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&_])[A-Za-z\d@$!%?&_]{8,}$/gm;
+const regEmail = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+const regPw = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%?&_])[A-Za-z\d@$!%?&_]{8,}$/;
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('Register-Form');
     form.addEventListener('submit', function (e) {
