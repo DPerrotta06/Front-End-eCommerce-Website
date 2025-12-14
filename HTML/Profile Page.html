@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     <link rel="stylesheet" type="text/css" href="../CSS/Profile Page.css">
+    <script src="../Javascript/Profile.js" type="text/javascript"></script>
 </head>
+
 <body>
     <!-- Header -->
-    <header> 
+    <header>
         <nav>
             <a class="logo">🛒 YMCBay</a>
-            <ul class="nav-linked"> 
+            <ul class="nav-linked">
                 <li> <a href="Home Page.html"> Home </a> </li>
-                <li> <a> Products </a> </li>
+                <li> <a href="Product Listing Page.html"> Products </a> </li>
                 <li> <a href="About Contact Page.html"> About </a> </li>
                 <li> <a href="About Contact Page.html"> Contact </a> </li>
             </ul>
-            <div class="nav-ico"> 
+            <div class="nav-ico">
                 <button class="ico-button" aria-label="Search">🔍</button>
-                <button class="ico-button" aria-label="Shopping Cart">🛒 
+                <a href="Shopping Cart Page.html" class="ico-button" aria-label="Shopping Cart">🛒
                     <span class="cart-badger">0</span>
-                </button>
+                </a>
                 <button class="ico-button" onclick="window.location.href='Login.html'" aria-label="Account">👤</button>
             </div>
         </nav>
@@ -40,10 +43,10 @@
             <section class="profile-main">
                 <h2 class="section-title"> Personal Information </h2>
                 <form>
-                    <div class="form-grid"> 
+                    <div class="form-grid">
                         <div class="form-group">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" name="first-name">    
+                            <input type="text" id="first-name" name="first-name">
                         </div>
                         <div class="form-group">
                             <label for="last-name">Last Name</label>
@@ -57,15 +60,15 @@
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone">
                         </div>
-                        <div class="form-group"> 
+                        <div class="form-group">
                             <label for="birthdate">Birth Date</label>
                             <input type="date" id="birthdate" name="birthdate">
                         </div>
-                        <div class="form-group full-width"> 
+                        <div class="form-group full-width">
                             <label for="address">Address</label>
                             <input type="text" id="address" name="address">
                         </div>
-                        <div class="form-group"> 
+                        <div class="form-group">
                             <label for="city">City</label>
                             <input type="text" id="city" name="city">
                         </div>
@@ -79,51 +82,52 @@
                         <button type="button" class="button button-cancel">Cancel</button>
                     </div>
                 </form>
-            </section>    
+            </section>
         </div>
     </main>
     <!-- Footer -->
-    <footer> 
+    <footer>
         <div class="footer-container">
-            <div class="footer-section"> 
+            <div class="footer-section">
                 <h3> Shop </h3>
-                <ul> 
-                    <li> <a> All Products </a> </li>
-                    <li> <a> Electronics </a> </li>
-                    <li> <a> Clothing </a> </li>
-                    <li> <a> Home & Kitchen </a> </li>
-                </ul>  
+                <ul>
+                    <li> <a href="Product Listing Page.html"> All Products </a> </li>
+                    <li> <a href="Error Page.html"> Electronics </a> </li>
+                    <li> <a href="Error Page.html"> Clothing </a> </li>
+                    <li> <a href="Error Page.html"> Home & Kitchen </a> </li>
+                </ul>
             </div>
-            <div class="footer-section"> 
+            <div class="footer-section">
                 <h3> Customer Service </h3>
-                <ul> 
+                <ul>
                     <li> <a href="#contact"> Contact Us </a> </li>
-                    <li> <a> Shipping Info </a> </li>
-                    <li> <a> Returns </a> </li>
-                    <li> <a> FAQ </a> </li>
+                    <li> <a href="Error Page.html"> Shipping Info </a> </li>
+                    <li> <a href="Error Page.html"> Returns </a> </li>
+                    <li> <a href="Error Page.html"> FAQ </a> </li>
                 </ul>
             </div>
-            <div class="footer-section"> 
+            <div class="footer-section">
                 <h3> About </h3>
-                <ul> 
+                <ul>
                     <li> <a href="#story"> Our Story </a> </li>
-                    <li> <a> Privacy Policy </a> </li>
-                    <li> <a> Terms of Service </a> </li>
+                    <li> <a href="Error Page.html"> Privacy Policy </a> </li>
+                    <li> <a href="Error Page.html"> Terms of Service </a> </li>
                 </ul>
             </div>
-            <div class="footer-section"> 
+            <div class="footer-section">
                 <h3>Newsletter</h3>
                 <p> Subscribe for exclusive offers and updates </p>
-                <div class="newsletter-input"> 
-                    <input type="email" placeholder="your email", id="newsletterEmail">
+                <div class="newsletter-input">
+                    <input type="email" placeholder="your email"  id="newsletterEmail">
                     <button class="newsletter-button" onclick="subscribeNewsletter()">Subscribe</button>
                 </div>
             </div>
-            </div>
-            <div class="footer-bottom"> 
-                <p> &copy 2025 YMCBay. All rights reserved. </p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> &copy 2025 YMCBay. All rights reserved. </p>
+        </div>
         </div>
     </footer>
 </body>
+
 </html>
