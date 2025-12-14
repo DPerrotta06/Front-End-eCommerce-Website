@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.Register-Wrapper {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 500px;
+    padding: 2.5rem;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Register-Wrapper h1 {
+    text-align: center;
+    color: #667eea;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Register-Wrapper h3 {
+    color: #666;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+#Register-Form {
+    margin-bottom: 1.5rem;
+}
+
+.Form-Wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.Form-Wrapper label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.Form-Wrapper input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.Form-Wrapper input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+}
+
+.Form-Wrapper input::placeholder {
+    color: #999;
+}
+
+.Register-Wrapper > div {
+    margin-bottom: 1.5rem;
+}
+
+.Register-Wrapper label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.Register-Wrapper input[type="checkbox"] {
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
+
+.Register-Wrapper label span {
+    flex: 1;
+}
+
+.Register-Wrapper label a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.Register-Wrapper label a:hover {
+    text-decoration: underline;
+}
+
+#Register-button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%,#764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+#Register-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102,126,234,0.4);
+}
+
+.Register-Wrapper > div:last-child {
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.Register-Wrapper > div:last-child a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.Register-Wrapper > div:last-child a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .Register-Wrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    .Register-Wrapper {
+        font-size: 2rem;
+    }
+}
+
+#login-link:visited {
+    color: #667eea;
+}
