@@ -1,7 +1,11 @@
+console.log("JS loaded!");
 $(document).ready(function () {
     loadProducts();
     setupEventListeners();
+    updateCartCount();
 });
+
+
 let allProducts = [];
 let filteredProducts = [];
 let currentPage = 1;
@@ -30,13 +34,12 @@ function applyFilters() {
     const selectedCategories = getSelectedCategories();
     filteredProducts = allProducts.filter(product => {
         const matchesSearch =
-            !searchQuery ||
-            product.name.toLowerCase().includes(searchQuery);
-
+            !searchQuery || product.name.toLowerCase().includes(searchQuery);
         const matchesPrice = product.price <= maxPrice;
         const matchesCategory =
             selectedCategories.length === 0 ||
             selectedCategories.includes(product.category);
+
         return matchesSearch && matchesPrice && matchesCategory;
     });
     applySorting();
@@ -82,12 +85,39 @@ function updateCounts() {
     $("#total-product-count").text(allProducts.length);
 }
 
-
 function renderPagination() {
     const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
     $("#page-numbers").text(`Page ${currentPage} of ${totalPages}`);
     $("#prev-page").prop("disabled", currentPage === 1);
     $("#next-page").prop("disabled", currentPage === totalPages);
+}
+
+
+function addToCart(productId) {
+    const product = allProducts.find(p => p.id == productId);
+    if (!product) return;
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingItem = cart.find(item => item.id == productId);
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: 1
+        });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+}
+
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    $("#home-shoppingcart span").text(totalItems);
 }
 
 
@@ -119,6 +149,10 @@ function setupEventListeners() {
         }
     });
     $("#reset-filter").on("click", resetFilters);
+    $(document).on("click", ".add-to-cart-btn", function () {
+        const productId = $(this).data("id");
+        addToCart(productId);
+    });
 }
 
 
@@ -141,7 +175,6 @@ function performSearch() {
 
 function getSelectedCategories() {
     const categories = [];
-
     if ($("#electronics-chkBox").is(":checked")) categories.push("Electronics");
     if ($("#home-chkBox").is(":checked")) categories.push("Home & Kitchen");
     if ($("#sports-chkBox").is(":checked")) categories.push("Sports & Outdoors");
