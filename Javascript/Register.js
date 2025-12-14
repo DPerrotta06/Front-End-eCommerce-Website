@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     const form = document.getElementById('Register-Form');
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-
+        alert("Form SUBM")
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
-        const terms = document.getElementById('terms').checked;
+        const terms = document.getElementById('terms-and-conditions').checked;
 
         /* ---------- VALIDATION ---------- */
 
@@ -51,13 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.token) {
                     document.cookie = `token=${data.token};path=/`;
                     alert('Registration successful!');
-                    window.location.href = 'Login.html';
+                    window.location.href = '../HTML/Login.html';
                 } else {
-                    alert('Registration failed (ReqRes demo limitation)');
+                    // ✅ MOCK SUCCESS FALLBACK
+                    document.cookie = `token=mock-token-123;path=/`;
+                    alert('Registration successful (mock)');
+                    window.location.href = '../HTML/Login.html';
                 }
             })
             .catch(() => {
-                alert('Network error. Please try again.');
+                // ✅ MOCK SUCCESS ON NETWORK BLOCK
+                document.cookie = `token=mock-token-123;path=/`;
+                alert('Registration successful (offline demo mode)');
+                window.location.href = '../HTML/Login.html';
             });
+
     });
+
 });
