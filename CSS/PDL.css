@@ -1,0 +1,545 @@
+/* ========== Global Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ========== Header ========== */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+header > div {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #667eea;
+}
+
+#search {
+    padding: 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    font-size: 14px;
+    width: 250px;
+    transition: all 0.3s;
+}
+
+#search:focus {
+    outline: none;
+    border-color: #667eea;
+    width: 300px;
+}
+
+#product-search-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#product-search-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+#home-shoppingcart,
+#home-pfp {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+#home-shoppingcart:hover,
+#home-pfp:hover {
+    transform: scale(1.1);
+}
+
+#home-shoppingcart span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ef4444;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* ========== Breadcrumb & Results Info Section ========== */
+body > section:first-of-type {
+    background: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#breadcrumb-nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5px 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.products-being-displayed {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5px 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.products-being-displayed span {
+    font-weight: 600;
+    color: #667eea;
+}
+
+/* ========== Main Layout ========== */
+.products-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 20px 40px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+}
+
+/* ========== Sidebar Filters ========== */
+aside {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 90px;
+}
+
+aside h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #667eea;
+}
+
+aside section h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0 15px;
+    font-weight: 600;
+}
+
+aside section h3:first-child {
+    margin-top: 0;
+}
+
+aside label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+aside label:hover {
+    color: #667eea;
+}
+
+aside input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+}
+
+/* Price Range Slider Container */
+aside section > div:nth-child(2) {
+    margin-top: 20px;
+}
+
+aside section > div:nth-child(2) > label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+aside section > div:nth-child(2) > span {
+    display: block;
+    font-size: 14px;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#price-range {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    outline: none;
+    cursor: pointer;
+    accent-color: #667eea;
+}
+
+#price-range::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+}
+
+#price-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #667eea;
+    cursor: pointer;
+    border: none;
+}
+
+/* Reset Filter Button */
+#reset-filter {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#reset-filter:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* ========== Products Section ========== */
+.products-wrapper > section {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sort Container */
+#sort-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#sort-container label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+#sort-select {
+    padding: 8px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+#sort-select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Products Table Section */
+#products-table {
+    margin-bottom: 30px;
+    min-height: 400px;
+}
+
+/* Items List Wrapper (JS will populate this) */
+.items-list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Product Card Styles (for JS-generated cards) */
+.product-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.product-price {
+    font-size: 22px;
+    color: #667eea;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.product-btn,
+.add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.product-btn:hover,
+.add-to-cart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ========== Pagination ========== */
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+#pagination button {
+    padding: 10px 20px;
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#pagination button:hover:not(:disabled) {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+#pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+#page-numbers {
+    display: flex;
+    gap: 5px;
+}
+
+.page-num {
+    padding: 8px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: white;
+    color: #333;
+}
+
+.page-num:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.page-num.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+/* ========== Footer ========== */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    margin: 0 15px;
+}
+
+footer a:hover {
+    color: #764ba2;
+}
+
+#social-links {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+footer p {
+    color: #888;
+    margin-top: 20px;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 1024px) {
+    .products-wrapper {
+        grid-template-columns: 240px 1fr;
+    }
+    
+    .items-list-wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header > div {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .products-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    aside {
+        position: relative;
+        top: 0;
+    }
+    
+    .items-list-wrapper {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    #search {
+        width: 100%;
+    }
+    
+    #search:focus {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .items-list-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    #pagination {
+        flex-wrap: wrap;
+    }
+    
+    #pagination button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}

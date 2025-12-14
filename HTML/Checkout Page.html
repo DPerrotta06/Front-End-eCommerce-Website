@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/Checkout.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../Javascript/Checkout.js" type="text/Javascript"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="Home Page.html">Back To Home Page</a></li>
+                    <li><a href="Product Listing Page.html">Products</a></li>
+                    <li><a href="About Contact Page.html">About & Contact</a></li>
+                </ul>
+            </nav>
+            <a href="Shopping Cart Page.html" id="home-shoppingcart">
+                🛒<span id="cart-count">0</span>
+            </a>
+            <a href="Profile Page.html" id="home-pfp">Profile👤</a>
+        </div>
+    </header>
+    <main class="checkout-wrapper">
+        <aside>
+            <h2>Shipping Address</h2>
+            <form>
+                <div class="checkout-form">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" name="name" placeholder="Please enter your name" required>
+                </div>
+                <div class="checkout-form">
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="email" placeholder="Please enter your email" required>
+                </div>
+                <div class="checkout-form">
+                    <label for="phonenumber">Phone:</label>
+                    <input id="phonenumber" name="phone" type="tel" placeholder="Enter your phone number (optional)">
+                </div>
+                <div class="checkout-form">
+                    <section id="address">
+                        <label for="checkout-address">Address:</label>
+                        <input id="checkout-address" type="text" name="address" placeholder="Please enter your address" required>
+                        <div class="delivery-options">
+                            <h3>Choose a delivery option:</h3>
+                            <label for="regular">Regular
+                            <input id="regular" type="radio" name="delivery-option">
+                            </label>
+                            <label for="same-day">Same Day
+                            <input id="same-day" type="radio" name="delivery-option">
+                            </label>
+                            <label for="not-rush">No Rush
+                            <input id="not-rush" type="radio" name="delivery-option">
+                            </label>
+                        </div>
+                    </section>
+                </div>
+            </form>
+        </aside>
+        <section class="cart-content">
+            <div id="item-cart-list">
+                <h4>Item name goes here</h4>
+                <p>Price: $</p>
+                <p>Quantity: 0</p>
+            </div>
+            <div class="price-breakdown-summary">
+                <span id="sub">Subtotal:</span>
+                <span id="sub-price">$</span>
+                <span id="tax">Tax </span>
+                <span id="tax-price">$</span>
+                <span id="total">Total:</span>
+                <span id="toatl-price">$</span>
+            </div>
+            <button id="order-btn" type="button">Place Order</button>
+        </section>
+    </main>
+    <footer> 
+        <div class="footer-container">
+            <div class="footer-section"> 
+                <h3> Shop </h3>
+                <ul> 
+                    <li> <a> All Products </a> </li>
+                    <li> <a> Electronics </a> </li>
+                    <li> <a> Clothing </a> </li>
+                    <li> <a> Home & Kitchen </a> </li>
+                </ul>  
+            </div>
+            <div class="footer-section"> 
+                <h3> Customer Service </h3>
+                <ul> 
+                    <li> <a href="#contact"> Contact Us </a> </li>
+                    <li> <a> Shipping Info </a> </li>
+                    <li> <a> Returns </a> </li>
+                    <li> <a> FAQ </a> </li>
+                </ul>
+            </div>
+            <div class="footer-section"> 
+                <h3> About </h3>
+                <ul> 
+                    <li> <a href="#story"> Our Story </a> </li>
+                    <li> <a> Privacy Policy </a> </li>
+                    <li> <a> Terms of Service </a> </li>
+                </ul>
+            </div>
+            <div class="footer-section"> 
+                <h3>Newsletter</h3>
+                <p> Subscribe for exclusive offers and updates </p>
+                <div class="newsletter-input"> 
+                    <input type="email" placeholder="your email" id="newsletterEmail">
+                    <button class="newsletter-button" onclick="subscribeNewsletter()">Subscribe</button>
+                </div>
+            </div>
+            </div>
+            <div class="footer-bottom"> 
+                <p> &copy 2025 YMCBay. All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

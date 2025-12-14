@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/Shopping Cart Page.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../Javascript/Shopping Cart.js" type="text/javascript"></script> <!--API gets called here-->
+</head>
+<body>
+    <!-- Header -->
+    <header> 
+        <nav>
+            <a class="logo">🛒 YMCBay</a>
+            <ul class="nav-linked"> 
+                <li> <a href="Home Page.html"> Home </a> </li>
+                <li> <a href="Product Listing Page.html"> Products </a> </li>
+                <li> <a href="About Contact Page.html"> About </a> </li>
+                <li> <a href="About Contact Page.html"> Contact </a> </li>
+            </ul>
+            <div class="nav-ico"> 
+                <button class="ico-button" aria-label="Search">🔍</button>
+                <a href="Shopping Cart Page.html" class="ico-button" aria-label="Shopping Cart">🛒 
+                    <span class="cart-badger">0</span>
+                </a>
+                <button class="ico-button" onclick="window.location.href='Login.html'" aria-label="Account">👤</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Your Shopping Cart</h1>
+        <div class="cart-container">
+            <!-- Cart Items Section -->
+            <section class="cart-items">
+                <div class="cart-header">
+                    <h2>Cart Items</h2>
+                    <button id="clear-cart" class="clear-cart">
+                        <i class="fas fa-trash-alt"></i>
+                        Clear Cart
+                    </button>
+                </div>
+                
+                <div id="cart-items-container">
+                    <!-- Cart items will be dynamically inserted here -->
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Your cart is empty</h3>
+                        <p>Looks like you haven't added any products to your cart yet.</p>
+                        <a href="Product Listing Page.html" class="continue-shopping">Continue Shopping</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Order Summary Section -->
+            <section class="order-summary">
+                <h2>Order Summary</h2>
+                
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">$5.99</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span>Tax (8%)</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+                
+                <button id="checkout-btn" class="checkout-btn">
+                    <i class="fas fa-lock"></i>
+                    Proceed to Checkout
+                </button>
+                
+                <p class="secure-connection">
+                    <i class="fas fa-shield-alt"></i> Secure checkout
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer> 
+        <div class="footer-container">
+            <div class="footer-section"> 
+                <h3> Shop </h3>
+                <ul> 
+                    <li> <a href="Product Listing Page.html"> All Products </a> </li>
+                    <li> <a href="Error Page.html"> Electronics </a> </li>
+                    <li> <a href="Error Page.html"> Clothing </a> </li>
+                    <li> <a href="Error Page.html"> Home & Kitchen </a> </li>
+                </ul>  
+            </div>
+            <div class="footer-section"> 
+                <h3> Customer Service </h3>
+                <ul> 
+                    <li> <a href="About Contact Page.html"> Contact Us </a> </li>
+                    <li> <a href="Error Page.html"> Shipping Info </a> </li>
+                    <li> <a href="Error Page.html"> Returns </a> </li>
+                    <li> <a href="Error Page.html"> FAQ </a> </li>
+                </ul>
+            </div>
+            <div class="footer-section"> 
+                <h3> About </h3>
+                <ul> 
+                    <li> <a href="About Contact Page.html"> Our Story </a> </li>
+                    <li> <a href="Error Page.html"> Privacy Policy </a> </li>
+                    <li> <a href="Error Page.html"> Terms of Service </a> </li>
+                </ul>
+            </div>
+            <div class="footer-section"> 
+                <h3>Newsletter</h3>
+                <p> Subscribe for exclusive offers and updates </p>
+                <div class="newsletter-input"> 
+                    <input type="email" placeholder="your email" id="newsletterEmail">
+                    <button class="newsletter-button" onclick="subscribeNewsletter()">Subscribe</button>
+                </div>
+            </div>
+            </div>
+            <div class="footer-bottom"> 
+                <p> &copy 2025 YMCBay. All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

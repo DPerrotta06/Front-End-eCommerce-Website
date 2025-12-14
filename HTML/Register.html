@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/Register.css">
+    <script src="../Javascript/Register.js" defer></script> <!--API gets called here-->
+</head>
+<body>
+    <div class="Register-Wrapper">
+        <h1> YMCBay </h1>
+        <h3> Create your account and start shopping </h3>
+        <form id="Register-Form">
+            <div class="Form-Wrapper">
+                <label for="name"> Full Name: </label>
+                <input id="name" type="text" name="name" placeholder="Please enter your full name" required>
+            </div>
+            <div class="Form-Wrapper">
+                <label for="email"> Email: </label>
+                <input id="email" type="email" name="email" placeholder="Please enter your email" required>
+            </div>
+            <div class="Form-Wrapper">
+                <label for="password"> Password: </label>
+                <input id="password" type="password" name="password" placeholder="Please enter your password" required>
+            </div>
+            <div class="Form-Wrapper">
+                <label for="confirm-password"> Confirm Password </label>
+                <input id="confirm-password" type="password" name="confirm-password" placeholder="Please confirm your password" required>
+            </div>
+            <div>
+                <label> 
+                    <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
+                    <span>
+                       I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>    
+                    </span>    
+                </label>
+            </div>
+            <button type="submit" id="Register-button"> Create Account </button>
+        </form>
+        <div class="terms-wrapper">
+            <p> Already have an account? <a href="Login.html" id="login-link">Login Here!</p>
+        </div>
+    </div>
+</body>
+</html>
