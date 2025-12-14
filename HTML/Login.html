@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="../CSS/Login.css">
-    <script src="#" type="text/javascript"></script> <!--API gets called here-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../Javascript/Login.js" type="text/javascript"></script> <!--API gets called here-->
 </head>
 <body>
     <div class="Login-Wrapper">
         <h1>YMCBay</h1>
-        <h2>Welcome back! Login using your account</h2>
+        <h2>Welcome back! Login using your account!</h2>
         <form id="Login-Form">
             <div class="Form-Wrapper">
                 <label for="email">Email:</label>
@@ -20,7 +21,7 @@
                 <label for="passw">Password:</label>
                 <input id="passw" type="password" name="passw" placeholder="Please enter your password here" required>
             </div>
-            <button type="button" id="Login-Btn">Login</button>
+            <button type="submit" id="Login-Btn">Login</button>
             <a href="#" id="forgot-pw-link">Forgot Password?</a>
         </form>
         <div>
