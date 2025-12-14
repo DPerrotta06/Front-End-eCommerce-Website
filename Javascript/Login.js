@@ -24,7 +24,7 @@ $(document).ready(function () {
                 // Mock login fallback
                 document.cookie = "token=mock-token-123; path=/";
                 alert("Login successful (demo mode)");
-                window.location.href = "../HTML/Home.html";
+                window.location.href = "../HTML/Home Page.html";
             },
             complete: function () {
                 $("#Login-Btn").prop("disabled", false).text("Login"); //disables the login button
